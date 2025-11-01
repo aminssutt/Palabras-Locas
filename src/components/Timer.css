@@ -1,0 +1,120 @@
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.timer-circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.timer-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.timer-background {
+  fill: none;
+  stroke: #e5e7eb;
+  stroke-width: 8;
+}
+
+.timer-progress {
+  fill: none;
+  stroke: #667eea;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s linear, stroke 0.3s ease;
+}
+
+.timer-container.active .timer-progress {
+  stroke: #f5576c;
+}
+
+.timer-container.critique .timer-progress {
+  stroke: #ef4444;
+  animation: pulse 0.5s infinite;
+}
+
+.timer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.timer-seconds {
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #764ba2;
+  line-height: 1;
+}
+
+.timer-container.critique .timer-seconds {
+  color: #ef4444;
+  animation: shake 0.3s infinite;
+}
+
+.timer-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.timer-message {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #667eea;
+  text-align: center;
+  margin: 0;
+  animation: fadeIn 0.3s ease;
+}
+
+.timer-container.critique .timer-message {
+  color: #ef4444;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+  25% { transform: translate(-50%, -50%) rotate(-3deg); }
+  75% { transform: translate(-50%, -50%) rotate(3deg); }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .timer-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .timer-seconds {
+    font-size: 2.5rem;
+  }
+}

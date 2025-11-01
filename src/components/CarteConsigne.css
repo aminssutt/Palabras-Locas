@@ -1,0 +1,139 @@
+.carte-consigne {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  margin: 0 auto;
+  animation: slideIn 0.3s ease-out;
+}
+
+.carte-green {
+  border-top: 5px solid #4ade80;
+}
+
+.carte-blue {
+  border-top: 5px solid #60a5fa;
+}
+
+.carte-red {
+  border-top: 5px solid #f87171;
+}
+
+.carte-purple {
+  border-top: 5px solid #a78bfa;
+}
+
+.carte-yellow {
+  border-top: 5px solid #fbbf24;
+}
+
+.carte-gold {
+  border-top: 5px solid #fbbf24;
+  background: linear-gradient(135deg, #fef3c7 0%, #fef9c3 100%);
+}
+
+.carte-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.carte-icon {
+  font-size: 3rem;
+}
+
+.carte-titre {
+  font-size: 1.8rem;
+  color: #764ba2;
+  margin: 0;
+  font-weight: 700;
+}
+
+.carte-body {
+  margin-bottom: 1.5rem;
+}
+
+.carte-consigne-text {
+  font-size: 1.3rem;
+  color: #333;
+  line-height: 1.6;
+  font-weight: 500;
+  background: #f8f9ff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin: 0;
+  border-left: 4px solid #667eea;
+}
+
+.carte-info {
+  font-size: 1.1rem;
+  color: #666;
+  text-align: center;
+  margin: 0;
+}
+
+.btn-demarrer {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-demarrer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.carte-termine {
+  text-align: center;
+  padding: 1rem;
+  background: #dcfce7;
+  color: #16a34a;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 15px;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .carte-consigne {
+    padding: 1.5rem;
+  }
+
+  .carte-icon {
+    font-size: 2.5rem;
+  }
+
+  .carte-titre {
+    font-size: 1.5rem;
+  }
+
+  .carte-consigne-text {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+
+  .btn-demarrer {
+    font-size: 1rem;
+  }
+}

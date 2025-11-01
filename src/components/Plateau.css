@@ -1,0 +1,117 @@
+.plateau-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.plateau-piste {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.case {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.case-start {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  font-weight: 700;
+  color: #764ba2;
+  font-size: 0.8rem;
+}
+
+.case-theme {
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+}
+
+.case-emotion {
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+}
+
+.case-motFou {
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+}
+
+.case-situation {
+  background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
+}
+
+.case-finish {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  font-size: 1.2rem;
+}
+
+.case.active {
+  border: 3px solid #764ba2;
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+  z-index: 10;
+}
+
+.case-label {
+  font-size: 1.2rem;
+}
+
+.case-start .case-label,
+.case-finish .case-label {
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.pion {
+  position: absolute;
+  bottom: 5px;
+  font-size: 1.5rem;
+  animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 768px) {
+  .plateau-piste {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.3rem;
+    padding: 1rem;
+  }
+
+  .case {
+    font-size: 1rem;
+  }
+
+  .case-label {
+    font-size: 1rem;
+  }
+
+  .case-start .case-label,
+  .case-finish .case-label {
+    font-size: 0.6rem;
+  }
+
+  .pion {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .plateau-piste {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

@@ -1,0 +1,215 @@
+.regles-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+}
+
+.regles-language-toggle {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
+}
+
+.regles-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 3rem;
+  border-radius: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.regles-title {
+  font-size: 2.5rem;
+  color: #764ba2;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.regles-subtitle {
+  font-size: 1.5rem;
+  color: #f5576c;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.regles-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.regle-section {
+  background: #f8f9ff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  border-left: 5px solid #667eea;
+}
+
+.regle-section h3 {
+  font-size: 1.5rem;
+  color: #667eea;
+  margin-bottom: 1rem;
+}
+
+.regle-section p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+}
+
+.regle-section ul,
+.regle-section ol {
+  color: #555;
+  line-height: 1.8;
+  padding-left: 2rem;
+}
+
+.regle-section li {
+  margin-bottom: 0.5rem;
+}
+
+.regle-section strong {
+  color: #764ba2;
+}
+
+/* Types de cases */
+.cases-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.case-type {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.case-type.green {
+  border-top: 4px solid #4ade80;
+}
+
+.case-type.blue {
+  border-top: 4px solid #60a5fa;
+}
+
+.case-type.red {
+  border-top: 4px solid #f87171;
+}
+
+.case-type.purple {
+  border-top: 4px solid #a78bfa;
+}
+
+.case-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.case-type h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.case-type p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Système de points */
+.points-system {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.point-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.points-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+.points-badge.bonus {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.point-item p {
+  color: #555;
+  margin: 0;
+}
+
+/* Bouton retour */
+.back-button-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.btn-back {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-back:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+@media (max-width: 768px) {
+  .regles-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .regles-title {
+    font-size: 2rem;
+  }
+
+  .regles-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .regle-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .cases-types {
+    grid-template-columns: 1fr;
+  }
+
+  .point-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}
