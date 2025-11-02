@@ -51,35 +51,41 @@
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
 }
 
-.section-sombrero {
+.section-cartes {
+  grid-column: 1 / -1;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.section-centrale {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1.5rem;
-  align-items: start;
-}
-
-.zone-de {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 1.5rem;
-  border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.zone-carte {
+.section-consigne {
+  grid-column: 1 / -1;
   min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message-attente {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.message-attente h3 {
+  font-size: 1.5rem;
+  color: #764ba2;
+  margin: 0;
 }
 
 .section-droite {
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
@@ -206,21 +212,22 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .section-centrale {
-    grid-template-columns: 1fr;
-  }
-
-  .zone-de {
-    display: flex;
-    justify-content: center;
-  }
-
   .section-droite {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 768px) {
+  .jeu-content {
+    grid-template-columns: 1fr;
+  }
+
+  .section-cartes,
+  .section-consigne,
+  .section-droite {
+    grid-column: 1;
+  }
+
   .jeu-header {
     flex-wrap: wrap;
     gap: 0.5rem;
