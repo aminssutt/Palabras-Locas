@@ -55,8 +55,10 @@
   gap: 1.5rem;
 }
 
-.section-plateau {
+.section-sombrero {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .section-centrale {

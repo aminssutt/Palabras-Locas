@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../contexts/LanguageContext'
 import { translations } from '../translations/translations'
-import Plateau from '../components/Plateau'
+import Sombrero from '../components/Sombrero'
 import De from '../components/De'
 import CarteConsigne from '../components/CarteConsigne'
 import Timer from '../components/Timer'
@@ -110,9 +110,9 @@ function Jeu() {
       </div>
 
       <div className="jeu-content">
-        {/* Plateau */}
-        <div className="section-plateau">
-          <Plateau positionJoueur={position} />
+        {/* Sombrero au centre */}
+        <div className="section-sombrero">
+          <Sombrero />
         </div>
 
         {/* Zone centrale - Dé + Carte */}
